@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<div class="gallery">
+    <div class="container">
+        <div class="w3ls-gallery-grids">
+            <p *ngIf="images.length === 0">Nenhuma imagem disponível</p>
+            <div class="col-md-4 gal-grid" *ngFor="let image of images">
+                <div class="gal-img">
+                    <a href="images/2.jpg" class="b-link-stripe b-animate-go  swipebox">
+                        <div class="item item-type-double">
+                            <div class="item-img"><img [src]="image.url" alt=" " /></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>

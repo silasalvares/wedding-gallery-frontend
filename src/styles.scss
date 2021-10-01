@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Castello Signature';
+    src: url('assets/template/fonts/castello-signature.ttf');
+}
+
+.header {
+    text-align: center;
+}
+
+.page-title {
+    font-family: 'Castello Signature';
+    font-size: 4em;
+    color: #fff;
+    margin: 0;
+}
+
+.banner a:hover {
+    text-decoration: none;
+}
+
+.page-title img {
+    padding-right: 10px;
+}
+
+.top-nav{
+    margin: 0;
+}
+
+.w3-banner {
+    padding: 0 0 10em 0;
+}
+
+.w3ls-button {
+    margin-top: 2;
+}
+
+.w3ls-button a:hover {
+    color: #947754;
+    background-color: #fff;
+}
+
+.w3ls-button-success a {
+    background-color: #a48c64;
+    border-color: #a48c64;
+}
+
+.w3ls-button-success a:hover {
+    color: #fff;
+    background-color: #a48c64;
+    border-color: #a48c64;
+}
+
+.gal-img {
+    margin: 5px;
+    border: none;
+}

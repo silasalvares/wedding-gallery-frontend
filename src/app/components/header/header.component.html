@@ -1,0 +1,32 @@
+<div class="banner">
+    <div class="header">
+        <a routerLink="/">
+            <h1 class="page-title">
+                <img src="/assets/template/images/logo.svg" />
+                <span>Maria e João</span>
+            </h1>
+            <div class="login">
+                <a routerLink="/approval">
+                    <i class="fa fa-lock" aria-hidden="true"></i>    
+                    Espaço dos noivos
+                </a>
+            </div>
+        </a>
+    </div>
+    <div class="header-bottom agileinfo-header-bottom">
+        <div class="container">
+            <div class="top-nav"></div>
+            <div class="w3-banner" *ngIf="showBanner">
+                <div class="w3ls-banner-info">
+                    <p>Agradecemos a sua presença! Use este espaço para enviar as fotos</p>
+                    <div class="w3ls-button w3ls-button-success">
+                        <a routerLink="/upload">Enviar Fotos</a>
+                    </div>
+                    <div class="w3ls-button">
+                        <a routerLink="/gallery">Ver Galeria</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

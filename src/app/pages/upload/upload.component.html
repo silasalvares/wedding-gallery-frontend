@@ -1,0 +1,11 @@
+<app-header></app-header>
+
+<div class="gallery">
+    <div class="container">
+        <p-fileUpload name="images[]" url="{{getUploadUrl()}}" [multiple]="true" 
+	        (onUpload)="greetings()" onError="alert('Erro')"
+            chooseLabel="Selecionar" uploadLabel="Enviar" cancelLabel="Cancelar">
+        </p-fileUpload>
+        <div class="clearfix"> </div>
+    </div>
+</div>
