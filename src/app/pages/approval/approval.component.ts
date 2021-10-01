@@ -19,14 +19,7 @@ export class ApprovalComponent implements OnInit {
   }
 
   private loadImages() {
-    let token: any = localStorage.getItem('token');
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Authorization': token
-      })
-    };
-    
-    this.http.get(`${environment.apiUrl}/approve`, httpOptions).subscribe(
+    this.http.get(`${environment.apiUrl}/approve`, this.loadOptions()).subscribe(
       (r: any) => {
         this.images = r;
       },
@@ -37,17 +30,22 @@ export class ApprovalComponent implements OnInit {
     
   }
 
-  approve(key:any) {
-    let token: any = localStorage.getItem('token');
+  approve(key:any)  {
+
+    this.http.post(`${environment.apiUrl}/${key}/approve`, {}, this.loadOptions()).subscribe(() => {
+      this.loadImages();
+    });
+  }
+
+  private loadOptions() {
+    let password: any = localStorage.getItem('Password');
     const httpOptions = {
       headers: new HttpHeaders({
-        'Authorization': token
+        'Password': password
       })
     };
 
-    this.http.post(`${environment.apiUrl}/${key}/approve`, {}, httpOptions).subscribe(() => {
-      this.loadImages();
-    });
+    return httpOptions;
   }
 
 }

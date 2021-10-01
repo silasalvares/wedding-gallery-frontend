@@ -4,8 +4,7 @@
 
 export const environment = {
   production: false,
-  //apiUrl: 'http://localhost:5000/api'
-  apiUrl: 'https://wedding-gallery.silascarvalho.dev:8080/api'
+  apiUrl: 'http://localhost:5000/api'
 };
 
 /*

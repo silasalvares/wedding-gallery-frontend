@@ -6,9 +6,13 @@
                 <span>Maria e João</span>
             </h1>
             <div class="login">
-                <a routerLink="/approval">
+                <a routerLink="/approval" *ngIf="!isLoggedIn()">
                     <i class="fa fa-lock" aria-hidden="true"></i>    
                     Espaço dos noivos
+                </a>
+                <a href="" *ngIf="isLoggedIn()" (click)="logout()">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i>    
+                    Sair
                 </a>
             </div>
         </a>

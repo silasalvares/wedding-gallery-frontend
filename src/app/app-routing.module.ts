@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './guards/auth.guard';
 import { ApprovalComponent } from './pages/approval/approval.component';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { GreetingsComponent } from './pages/greetings/greetings.component';
@@ -30,7 +31,9 @@ const routes: Routes = [
   },
   {
     path: 'approval',
-    component: ApprovalComponent
+    component: ApprovalComponent,
+    canActivate: [AuthGuard]
+
   }
 ];
 
